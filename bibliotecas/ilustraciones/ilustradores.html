@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Descubrí ilustradores de la comunidad de Mikhan y explorá sus obras.">
+    <meta name="author" content="Mikhan">
+    <title>Ilustradores — Bibliotecas — Mikhan</title>
+
+    <link rel="stylesheet" href="../../CSS/style.css">
+
+    <style>
+        .ilustradores-hero {
+            max-width: var(--max-width);
+            margin: 45px auto 25px;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .ilustradores-hero h1 {
+            margin-bottom: 10px;
+            color: var(--color-heading);
+        }
+
+        .ilustradores-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .buscador {
+            max-width: var(--max-width);
+            margin: 0 auto 30px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            gap: 10px;
+        }
+
+        .buscador input {
+            flex: 1;
+            min-width: 0;
+            padding: 12px 14px;
+            border: 1px solid var(--color-border-dark);
+            border-radius: var(--radius);
+            background: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-ui);
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .buscador input:focus {
+            outline: 2px solid var(--color-focus);
+            border-color: var(--color-focus);
+        }
+
+        .buscador button {
+            padding: 12px 20px;
+            border: 0;
+            border-radius: var(--radius);
+            background: var(--color-primary);
+            color: var(--color-soft-orange);
+            font-family: var(--font-ui);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buscador button:hover {
+            background: var(--color-secondary);
+            color: var(--color-text);
+        }
+
+        .ilustradores-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            box-sizing: border-box;
+        }
+
+        .ilustrador {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            padding: 25px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--color-soft-orange);
+            border: 2px solid var(--color-border);
+            color: var(--color-primary);
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .ilustrador h2 {
+            margin: 0 0 7px;
+            color: var(--color-heading);
+            font-size: 1.25rem;
+        }
+
+        .ilustrador-meta {
+            color: var(--color-muted);
+            font-family: var(--font-ui);
+            font-size: .9rem;
+        }
+
+        .ilustrador p {
+            line-height: 1.5;
+        }
+
+        .ilustrador a {
+            display: inline-block;
+            margin-top: 8px;
+            color: var(--color-secondary);
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .ilustrador a:hover {
+            color: var(--color-focus);
+        }
+
+        @media (max-width: 900px) {
+            .ilustradores-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .ilustradores-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .buscador {
+                flex-direction: column;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <img src="../../img/mikhan logo.png" alt="Logo Mikhan">
+
+        <li><a href="../../index/index.html">Entrada</a></li>
+        <li><a href="../biblioteca.html">Bibliotecas</a></li>
+        <li><a href="../../tablón/tablón.html">Mi tablón</a></li>
+        <li><a href="../../taberna/taberna_index.html">Taberna</a></li>
+        <li><a href="../../talleres/talleres.html">Talleres</a></li>
+        <li><a href="../../cuenta/autenticacion/registro.html">Registro</a></li>
+    </ul>
+</nav>
+
+<header class="ilustradores-hero">
+    <h1>Ilustradores</h1>
+
+    <p>
+        Conocé a quienes dan forma visual a los mundos de Mikhan.
+        Explorá sus perfiles y descubrí sus obras.
+    </p>
+</header>
+
+<main>
+
+    <form class="buscador" action="#" method="get">
+        <input
+            type="search"
+            name="buscar"
+            placeholder="Buscar ilustradores..."
+            aria-label="Buscar ilustradores"
+        >
+        <button type="submit">Buscar</button>
+    </form>
+
+    <section class="ilustradores-grid" aria-label="Ilustradores">
+
+        <article class="ilustrador">
+            <div class="avatar" aria-hidden="true">N</div>
+
+            <h2>Noah</h2>
+            <p class="ilustrador-meta">Fantasía · Personajes</p>
+
+            <p>
+                Ilustraciones de personajes, criaturas y mundos fantásticos.
+            </p>
+
+            <a href="#">Ver perfil</a>
+        </article>
+
+        <article class="ilustrador">
+            <div class="avatar" aria-hidden="true">A</div>
+
+            <h2>Aoi</h2>
+            <p class="ilustrador-meta">Personajes · Concept art</p>
+
+            <p>
+                Diseños de personajes y exploraciones visuales.
+            </p>
+
+            <a href="#">Ver perfil</a>
+        </article>
+
+        <article class="ilustrador">
+            <div class="avatar" aria-hidden="true">L</div>
+
+            <h2>Liora</h2>
+            <p class="ilustrador-meta">Arte conceptual · Fantasía</p>
+
+            <p>
+                Conceptos visuales y escenas inspiradas en mundos de ficción.
+            </p>
+
+            <a href="#">Ver perfil</a>
+        </article>
+
+        <article class="ilustrador">
+            <div class="avatar" aria-hidden="true">M</div>
+
+            <h2>MikhanArt</h2>
+            <p class="ilustrador-meta">Ciencia ficción · Ilustración</p>
+
+            <p>
+                Exploraciones de escenarios, personajes y conceptos futuristas.
+            </p>
+
+            <a href="#">Ver perfil</a>
+        </article>
+
+        <article class="ilustrador">
+            <div class="avatar" aria-hidden="true">E</div>
+
+            <h2>Ejemplo</h2>
+            <p class="ilustrador-meta">Ilustración · Color</p>
+
+            <p>
+                Perfil de ejemplo para mostrar cómo se presentarán
+                los artistas de la comunidad.
+            </p>
+
+            <a href="#">Ver perfil</a>
+        </article>
+
+        <article class="ilustrador">
+            <div class="avatar" aria-hidden="true">+</div>
+
+            <h2>Tu perfil</h2>
+            <p class="ilustrador-meta">¿Publicás ilustraciones?</p>
+
+            <p>
+                Cuando tengas una cuenta, vas a poder compartir
+                tus propias obras con la comunidad.
+            </p>
+
+            <a href="../../cuenta/autenticacion/registro.html">Registrate</a>
+        </article>
+
+    </section>
+
+</main>
+
+</body>
+</html>

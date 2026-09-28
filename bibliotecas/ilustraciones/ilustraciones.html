@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Biblioteca de ilustraciones de Mikhan — descubrí obras, estilos, géneros e ilustradores.">
+    <meta name="author" content="Mikhan">
+    <title>Ilustraciones — Bibliotecas — Mikhan</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        .ilustraciones-hero {
+            max-width: var(--max-width);
+            margin: 40px auto 25px;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .ilustraciones-hero h1 {
+            margin-bottom: 10px;
+            color: var(--color-heading);
+        }
+
+        .ilustraciones-hero p {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .filtros {
+            max-width: var(--max-width);
+            margin: 0 auto 30px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .busqueda {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .busqueda input {
+            flex: 1;
+            min-width: 0;
+            padding: 12px 14px;
+            border: 1px solid var(--color-border-dark);
+            border-radius: var(--radius);
+            background: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-ui);
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .busqueda input:focus {
+            outline: 2px solid var(--color-focus);
+            border-color: var(--color-focus);
+        }
+
+        .busqueda button {
+            padding: 12px 20px;
+            border: 0;
+            border-radius: var(--radius);
+            background: var(--color-primary);
+            color: var(--color-soft-orange);
+            font-family: var(--font-ui);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .busqueda button:hover {
+            background: var(--color-secondary);
+            color: var(--color-text);
+        }
+
+        .filtro-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .filtro-links a {
+            padding: 8px 13px;
+            background: var(--color-soft-orange);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            color: var(--color-primary);
+            text-decoration: none;
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .filtro-links a:hover,
+        .filtro-links a.activo {
+            background: var(--color-primary);
+            color: var(--color-soft-orange);
+        }
+
+        .galeria {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            box-sizing: border-box;
+        }
+
+        .ilustracion {
+            overflow: hidden;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .ilustracion-imagen {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-surface-dark);
+            color: var(--color-muted);
+            font-family: var(--font-ui);
+        }
+
+        .ilustracion-info {
+            padding: 18px;
+        }
+
+        .ilustracion-info h2 {
+            margin: 0 0 7px;
+            color: var(--color-heading);
+            font-size: 1.2rem;
+        }
+
+        .ilustracion-info p {
+            margin: 6px 0;
+        }
+
+        .ilustracion-meta {
+            color: var(--color-muted);
+            font-family: var(--font-ui);
+            font-size: .9rem;
+        }
+
+        .ilustracion-info a {
+            color: var(--color-secondary);
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .ilustracion-info a:hover {
+            color: var(--color-focus);
+        }
+
+        .sin-resultados {
+            max-width: var(--max-width);
+            margin: 0 auto 60px;
+            padding: 25px;
+            background: var(--color-soft-orange);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 900px) {
+            .galeria {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+
+            .busqueda {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <img src="../../img/mikhan logo.png" alt="Logo Mikhan">
+
+        <li><a href="../../index/index.html">Entrada</a></li>
+        <li><a href="../biblioteca.html">Bibliotecas</a></li>
+        <li><a href="../../tablón/tablón.html">Mi tablón</a></li>
+        <li><a href="../../taberna/taberna_index.html">Taberna</a></li>
+        <li><a href="../../talleres/talleres.html">Talleres</a></li>
+        <li><a href="../../cuenta/autenticacion/registro.html">Registro</a></li>
+    </ul>
+</nav>
+
+<header class="ilustraciones-hero">
+    <h1>Ilustraciones</h1>
+
+    <p>
+        Explorá obras creadas por la comunidad de Mikhan.
+        Buscá por estilo, género, popularidad o descubrí las novedades.
+    </p>
+</header>
+
+<main>
+
+    <section class="filtros">
+
+        <form class="busqueda" action="#" method="get">
+            <input
+                type="search"
+                name="buscar"
+                placeholder="Buscar ilustraciones..."
+                aria-label="Buscar ilustraciones"
+            >
+            <button type="submit">Buscar</button>
+        </form>
+
+        <nav class="filtro-links" aria-label="Filtros de ilustraciones">
+            <a class="activo" href="ilustraciones.html">Todas</a>
+            <a href="ilustraciones.html?filtro=estilo">Estilos</a>
+            <a href="ilustraciones.html?filtro=genero">Géneros</a>
+            <a href="ilustraciones.html?filtro=recientes">Recientes</a>
+            <a href="ilustraciones.html?filtro=populares">Populares</a>
+            <a href="ilustradores.html">Ilustradores</a>
+        </nav>
+
+    </section>
+
+    <section class="galeria" aria-label="Ilustraciones destacadas">
+
+        <article class="ilustracion">
+            <div class="ilustracion-imagen">
+                Vista previa de ilustración
+            </div>
+
+            <div class="ilustracion-info">
+                <h2>El guardián del bosque</h2>
+                <p class="ilustracion-meta">Noah · Fantasía</p>
+                <p>
+                    Una ilustración inspirada en criaturas y paisajes
+                    de un mundo fantástico.
+                </p>
+                <a href="#">Ver ilustración</a>
+            </div>
+        </article>
+
+        <article class="ilustracion">
+            <div class="ilustracion-imagen">
+                Vista previa de ilustración
+            </div>
+
+            <div class="ilustracion-info">
+                <h2>Retrato de personaje</h2>
+                <p class="ilustracion-meta">Aoi · Personajes</p>
+                <p>
+                    Un retrato de personaje creado por un miembro
+                    de la comunidad.
+                </p>
+                <a href="#">Ver ilustración</a>
+            </div>
+        </article>
+
+        <article class="ilustracion">
+            <div class="ilustracion-imagen">
+                Vista previa de ilustración
+            </div>
+
+            <div class="ilustracion-info">
+                <h2>Ciudad bajo las estrellas</h2>
+                <p class="ilustracion-meta">MikhanArt · Ciencia ficción</p>
+                <p>
+                    Una ciudad imaginaria iluminada durante la noche.
+                </p>
+                <a href="#">Ver ilustración</a>
+            </div>
+        </article>
+
+        <article class="ilustracion">
+            <div class="ilustracion-imagen">
+                Vista previa de ilustración
+            </div>
+
+            <div class="ilustracion-info">
+                <h2>Estudio de color</h2>
+                <p class="ilustracion-meta">Liora · Arte conceptual</p>
+                <p>
+                    Exploración de color, luz y composición.
+                </p>
+                <a href="#">Ver ilustración</a>
+            </div>
+        </article>
+
+        <article class="ilustracion">
+            <div class="ilustracion-imagen">
+                Vista previa de ilustración
+            </div>
+
+            <div class="ilustracion-info">
+                <h2>Un viaje comienza</h2>
+                <p class="ilustracion-meta">Noah · Aventura</p>
+                <p>
+                    Una escena que representa el comienzo de una aventura.
+                </p>
+                <a href="#">Ver ilustración</a>
+            </div>
+        </article>
+
+        <article class="ilustracion">
+            <div class="ilustracion-imagen">
+                Vista previa de ilustración
+            </div>
+
+            <div class="ilustracion-info">
+                <h2>Concepto de personaje</h2>
+                <p class="ilustracion-meta">MikhanArt · Fantasía</p>
+                <p>
+                    Diseño conceptual de un personaje original.
+                </p>
+                <a href="#">Ver ilustración</a>
+            </div>
+        </article>
+
+    </section>
+
+</main>
+
+</body>
+</html>

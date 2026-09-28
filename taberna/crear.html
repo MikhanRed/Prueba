@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <meta name="description" content="Creá una nueva discusión en la Taberna de Mikhan.">
+    <title>Crear discusión — Taberna — Mikhan</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <img src="../img/mikhan logo.png" alt="Logo Mikhan">
+
+            <li><a href="../index/index.html">Entrada</a></li>
+            <li><a href="../bibliotecas/biblioteca.html">Bibliotecas</a></li>
+            <li><a href="../tablon/tablon.html">Mi tablón</a></li>
+            <li><a href="taberna_index.html">Taberna</a></li>
+            <li><a href="../talleres/talleres.html">Talleres</a></li>
+            <li><a href="../cuenta/autenticacion/ingresar.html">Ingresar</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+
+        <!-- MIGAS -->
+        <div class="breadcrumb">
+
+            <a href="taberna_index.html">Taberna</a>
+
+            <span>›</span>
+
+            <span>Crear discusión</span>
+
+        </div>
+
+
+        <!-- CABECERA -->
+        <header class="page-header">
+
+            <h1>Crear una discusión</h1>
+
+            <p>
+                Compartí una idea, hacé una pregunta o iniciá
+                una conversación con la comunidad.
+            </p>
+
+        </header>
+
+
+        <!-- FORMULARIO -->
+        <section class="create-discussion">
+
+            <form>
+
+
+                <!-- MESA -->
+                <div class="form-group">
+
+                    <label for="mesa">
+                        Mesa
+                    </label>
+
+                    <p class="field-description">
+                        Elegí dónde querés publicar tu discusión.
+                    </p>
+
+                    <select id="mesa" name="mesa" required>
+
+                        <option value="">
+                            Seleccioná una mesa...
+                        </option>
+
+                        <option value="escritura">
+                            Escritura
+                        </option>
+
+                        <option value="lecturas">
+                            Lecturas
+                        </option>
+
+                        <option value="arte">
+                            Arte
+                        </option>
+
+                        <option value="comunidad">
+                            Comunidad
+                        </option>
+
+                        <option value="musica">
+                            Música
+                        </option>
+
+                        <option value="worldbuilding">
+                            Worldbuilding
+                        </option>
+
+                        <option value="videojuegos">
+                            Videojuegos
+                        </option>
+
+                        <option value="off-topic">
+                            Off-topic
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TÍTULO -->
+                <div class="form-group">
+
+                    <label for="titulo">
+                        Título
+                    </label>
+
+                    <p class="field-description">
+                        Escribí un título claro que permita entender
+                        de qué trata la discusión.
+                    </p>
+
+                    <input
+                        type="text"
+                        id="titulo"
+                        name="titulo"
+                        placeholder="¿Sobre qué querés hablar?"
+                        maxlength="120"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONTENIDO -->
+                <div class="form-group">
+
+                    <label for="contenido">
+                        Contenido
+                    </label>
+
+                    <p class="field-description">
+                        Desarrollá tu idea, pregunta o tema.
+                    </p>
+
+                    <textarea
+                        id="contenido"
+                        name="contenido"
+                        rows="12"
+                        placeholder="Escribí tu publicación..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- OPCIONES -->
+                <div class="form-options">
+
+                    <label class="checkbox-option">
+
+                        <input
+                            type="checkbox"
+                            name="spoiler"
+                        >
+
+                        <span>
+                            Esta discusión contiene spoilers
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- BOTONES -->
+                <div class="form-actions">
+
+                    <a
+                        href="taberna_index.html"
+                        class="cancel-button"
+                    >
+                        Cancelar
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="publish-button"
+                    >
+                        Publicar discusión
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+        <!-- CONSEJOS -->
+        <section class="tips">
+
+            <h2>Antes de publicar</h2>
+
+            <ul>
+
+                <li>
+                    Elegí la mesa que mejor corresponda al tema.
+                </li>
+
+                <li>
+                    Intentá que el título explique de qué trata
+                    la discusión.
+                </li>
+
+                <li>
+                    Si estás haciendo una pregunta, agregá suficiente
+                    contexto para que otros puedan responder.
+                </li>
+
+                <li>
+                    Recordá respetar las normas de convivencia
+                    de Mikhan.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p><strong>Mikhan</strong></p>
+
+        <p>
+            Cada escrito es un mundo.
+        </p>
+
+        <nav>
+            <ul>
+                <li><a href="../about.html">Sobre Mikhan</a></li>
+                <li><a href="../contact.html">Contacto</a></li>
+                <li><a href="../terminos.html">Términos y condiciones</a></li>
+                <li><a href="../privacidad.html">Privacidad</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+
+    <!-- ESTILOS ESPECÍFICOS -->
+
+    <style>
+
+        /* MAIN */
+
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+
+        /* MIGAS */
+
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+
+            margin: 35px 30px 0;
+
+            color: var(--color-muted);
+
+            font-family: var(--font-ui);
+            font-size: 0.85rem;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+        }
+
+
+        /* CABECERA */
+
+        .page-header {
+            max-width: 800px;
+
+            margin: 25px auto;
+
+            padding: 20px 30px;
+
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+        }
+
+
+        /* FORMULARIO */
+
+        .create-discussion {
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding: 35px;
+
+            background-color: var(--color-surface);
+
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+
+            box-shadow: var(--shadow-soft);
+        }
+
+        .form-group {
+            margin-bottom: 28px;
+        }
+
+
+        /* LABELS */
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: var(--color-heading);
+
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .field-description {
+            margin-top: 0;
+            margin-bottom: 10px;
+
+            font-size: 0.85rem;
+        }
+
+
+        /* INPUTS */
+
+        .form-group input[type="text"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 12px 14px;
+
+            border: 1px solid var(--color-border-dark);
+            border-radius: var(--radius);
+
+            background-color: var(--color-background);
+
+            color: var(--color-text);
+
+            font-family: var(--font-main);
+            font-size: 1rem;
+        }
+
+        .form-group select {
+            font-family: var(--font-ui);
+            cursor: pointer;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+
+            min-height: 180px;
+
+            line-height: 1.6;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 1px;
+        }
+
+
+        /* CHECKBOX */
+
+        .form-options {
+            margin-bottom: 30px;
+        }
+
+        .checkbox-option {
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            color: var(--color-text);
+
+            font-family: var(--font-ui);
+            font-size: 0.9rem;
+
+            cursor: pointer;
+        }
+
+        .checkbox-option input {
+            width: 17px;
+            height: 17px;
+
+            accent-color: var(--color-primary);
+
+            cursor: pointer;
+        }
+
+
+        /* BOTONES */
+
+        .form-actions {
+            display: flex;
+
+            justify-content: flex-end;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid var(--color-border);
+        }
+
+        .cancel-button,
+        .publish-button {
+            padding: 11px 18px;
+
+            border-radius: var(--radius);
+
+            font-family: var(--font-ui);
+
+            font-weight: bold;
+
+            text-decoration: none;
+
+            cursor: pointer;
+        }
+
+        .cancel-button {
+            background-color: transparent;
+
+            border: 1px solid var(--color-border);
+
+            color: var(--color-muted);
+        }
+
+        .cancel-button:hover {
+            background-color: var(--color-surface-dark);
+
+            color: var(--color-primary);
+        }
+
+        .publish-button {
+            border: none;
+
+            background-color: var(--color-primary);
+
+            color: var(--color-soft-orange);
+        }
+
+        .publish-button:hover {
+            background-color: var(--color-secondary);
+
+            color: var(--color-primary);
+        }
+
+
+        /* CONSEJOS */
+
+        .tips {
+            max-width: 800px;
+
+            margin: 25px auto 50px;
+
+            padding: 25px 30px;
+
+            background-color: var(--color-soft-orange);
+
+            border: 1px solid var(--color-border);
+
+            border-radius: var(--radius);
+        }
+
+        .tips h2 {
+            margin-top: 0;
+        }
+
+        .tips li {
+            margin-bottom: 10px;
+
+            color: var(--color-muted);
+
+            line-height: 1.5;
+        }
+
+
+        /* MÓVIL */
+
+        @media (max-width: 600px) {
+
+            .create-discussion {
+                margin: 0 15px;
+
+                padding: 25px 20px;
+            }
+
+            .page-header {
+                padding: 20px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .form-actions {
+                flex-direction: column-reverse;
+                align-items: stretch;
+            }
+
+            .cancel-button,
+            .publish-button {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</body>
+</html>

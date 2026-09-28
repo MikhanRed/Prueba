@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Talleres de Mikhan — aprendé, practicá y participá en tutoriales y concursos de dibujo y escritura.">
+    <meta name="author" content="Mikhan">
+    <title>Talleres — Mikhan</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .talleres-hero {
+            max-width: var(--max-width);
+            margin: 50px auto 30px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .talleres-hero h1 {
+            margin-bottom: 10px;
+            color: var(--color-heading);
+        }
+
+        .talleres-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .talleres-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            box-sizing: border-box;
+        }
+
+        .taller-card {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            padding: 30px;
+        }
+
+        .taller-card h2 {
+            margin-top: 0;
+            color: var(--color-heading);
+        }
+
+        .taller-card p {
+            line-height: 1.6;
+        }
+
+        .taller-card ul {
+            padding-left: 20px;
+            color: var(--color-muted);
+            line-height: 1.8;
+        }
+
+        .taller-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 11px 18px;
+            background-color: var(--color-primary);
+            color: var(--color-soft-orange);
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .taller-card a:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+        }
+
+        .taller-destacados {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            box-sizing: border-box;
+        }
+
+        .taller-destacados h2 {
+            color: var(--color-heading);
+        }
+
+        .tutoriales-lista {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .tutorial {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .tutorial h3 {
+            margin-top: 0;
+        }
+
+        .tutorial a {
+            color: var(--color-secondary);
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .tutorial a:hover {
+            color: var(--color-focus);
+        }
+
+        .concursos {
+            max-width: var(--max-width);
+            margin: 0 auto 60px;
+            padding: 30px;
+            box-sizing: border-box;
+            background-color: var(--color-soft-orange);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .concursos h2 {
+            margin-top: 0;
+            color: var(--color-heading);
+        }
+
+        .concursos a {
+            display: inline-block;
+            margin-right: 12px;
+            color: var(--color-primary);
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .concursos a:hover {
+            color: var(--color-secondary);
+        }
+
+        @media (max-width: 800px) {
+            .talleres-grid,
+            .tutoriales-lista {
+                grid-template-columns: 1fr;
+            }
+
+            .concursos {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <img src="../img/mikhan logo.png" alt="Logo Mikhan">
+
+            <li><a href="../index/index.html">Entrada</a></li>
+            <li><a href="../bibliotecas/biblioteca.html">Bibliotecas</a></li>
+            <li><a href="../tablon/tablon.html">Mi tablón</a></li>
+            <li><a href="../taberna/taberna_index.html">Taberna</a></li>
+            <li><a href="talleres.html">Talleres</a></li>
+            <li><a href="../cuenta/autenticacion/ingresar.html">Ingresar</a></li>
+        </ul>
+    </nav>
+<header class="talleres-hero">
+    <h1>Talleres</h1>
+
+    <p>
+        Un espacio para aprender, practicar y compartir.
+        Mejorá tus habilidades de dibujo y escritura con tutoriales,
+        recursos y concursos de la comunidad.
+    </p>
+</header>
+
+<main>
+
+    <section class="talleres-grid">
+
+        <article class="taller-card">
+            <h2>🎨 Taller de dibujo</h2>
+
+            <p>
+                Aprendé nuevas técnicas, descubrí recursos y encontrá
+                tutoriales para llevar tus ilustraciones un paso más allá.
+            </p>
+
+            <ul>
+                <li>Técnicas de dibujo</li>
+                <li>Color y composición</li>
+                <li>Personajes</li>
+                <li>Recursos para ilustradores</li>
+            </ul>
+
+            <a href="tutoriales.html">Explorar tutoriales</a>
+        </article>
+
+        <article class="taller-card">
+            <h2>✍️ Taller de escritura</h2>
+
+            <p>
+                Explorá herramientas para construir historias, personajes
+                y mundos que tengan algo propio que contar.
+            </p>
+
+            <ul>
+                <li>Narrativa</li>
+                <li>Construcción de personajes</li>
+                <li>Worldbuilding</li>
+                <li>Recursos para escritores</li>
+            </ul>
+
+            <a href="tutoriales.html">Explorar tutoriales</a>
+        </article>
+
+    </section>
+
+    <section class="taller-destacados">
+
+        <h2>Tutoriales recomendados</h2>
+
+        <div class="tutoriales-lista">
+
+            <article class="tutorial">
+                <h3>Fundamentos del dibujo</h3>
+                <p>
+                    Una introducción para quienes quieren empezar a mejorar
+                    sus bases de dibujo.
+                </p>
+                <a href="tuto_dibujo.html">Ver tutorial</a>
+            </article>
+
+            <article class="tutorial">
+                <h3>Construcción de personajes</h3>
+                <p>
+                    Ideas y herramientas para crear personajes con una
+                    identidad propia.
+                </p>
+                <a href="tuto_dibujo.html">Ver tutorial</a>
+            </article>
+
+            <article class="tutorial">
+                <h3>Cómo empezar una historia</h3>
+                <p>
+                    Recursos para encontrar una idea y transformarla
+                    en una historia.
+                </p>
+                <a href="tuto_escritura.html">Ver tutorial</a>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="concursos">
+
+        <h2>Concursos</h2>
+
+        <p>
+            Poné tus habilidades a prueba y participá en los concursos
+            de la comunidad de Mikhan.
+        </p>
+
+        <a href="concursos_dibujo.html">Concurso de dibujo</a>
+        <a href="concursos_escritura.html">Concurso de escritura</a>
+        <a href="concursos.html">Ver todos los concursos</a>
+
+    </section>
+
+</main>
+
+</body>
+</html>

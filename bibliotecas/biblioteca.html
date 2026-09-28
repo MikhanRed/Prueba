@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Bibliotecas de Mikhan — descubrí historias, ilustraciones, autores e ilustradores.">
+    <meta name="author" content="Mikhan">
+    <title>Bibliotecas — Mikhan</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .biblioteca-hero {
+            max-width: var(--max-width);
+            margin: 45px auto 30px;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .biblioteca-hero h1 {
+            margin-bottom: 10px;
+            color: var(--color-heading);
+        }
+
+        .biblioteca-hero p {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .bibliotecas-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            box-sizing: border-box;
+        }
+
+        .biblioteca-card {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            padding: 30px;
+        }
+
+        .biblioteca-card h2 {
+            margin-top: 0;
+            color: var(--color-heading);
+        }
+
+        .biblioteca-card p {
+            line-height: 1.6;
+        }
+
+        .biblioteca-opciones {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .biblioteca-opciones a {
+            padding: 10px 12px;
+            background-color: var(--color-soft-orange);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            color: var(--color-primary);
+            text-decoration: none;
+            font-family: var(--font-ui);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .biblioteca-opciones a:hover {
+            background-color: var(--color-primary);
+            color: var(--color-soft-orange);
+        }
+
+        .biblioteca-principal {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 11px 18px;
+            background-color: var(--color-primary);
+            color: var(--color-soft-orange);
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .biblioteca-principal:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+        }
+
+        .personas {
+            max-width: var(--max-width);
+            margin: 0 auto 60px;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+
+        .personas h2 {
+            color: var(--color-heading);
+        }
+
+        .personas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .personas-card {
+            padding: 22px;
+            background-color: var(--color-soft-orange);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .personas-card h3 {
+            margin-top: 0;
+        }
+
+        .personas-card a {
+            color: var(--color-secondary);
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .personas-card a:hover {
+            color: var(--color-focus);
+        }
+
+        @media (max-width: 800px) {
+            .bibliotecas-grid,
+            .personas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .biblioteca-opciones {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <img src="../img/mikhan logo.png" alt="Logo Mikhan">
+
+        <li><a href="../index/index.html">Entrada</a></li>
+        <li><a href="biblioteca.html">Bibliotecas</a></li>
+        <li><a href="../tablon/tablon.html">Mi tablón</a></li>
+        <li><a href="../taberna/taberna_index.html">Taberna</a></li>
+        <li><a href="../talleres/talleres.html">Talleres</a></li>
+        <li><a href="../cuenta/autenticacion/registro.html">Registro</a></li>
+    </ul>
+</nav>
+
+<header class="biblioteca-hero">
+    <h1>Bibliotecas</h1>
+
+    <p>
+        Explorá los mundos que la comunidad de Mikhan tiene para ofrecer.
+        Encontrá historias para leer e ilustraciones para descubrir.
+    </p>
+</header>
+
+<main>
+
+    <section class="bibliotecas-grid">
+
+        <article class="biblioteca-card">
+            <h2>📖 Historias</h2>
+
+            <p>
+                Descubrí novelas, relatos y mundos creados por escritores
+                de la comunidad.
+            </p>
+
+            <div class="biblioteca-opciones">
+                <a href="historias/historias.html">Todas</a>
+                <a href="historias/historias.html">Géneros</a>
+                <a href="historias/historias.html">Recientes</a>
+                <a href="historias/historias.html">Populares</a>
+                <a href="historias/historias.html">Buscar</a>
+                <a href="/historias/autores.html">Autores</a>
+            </div>
+
+            <a class="biblioteca-principal" href="historias/historias.html">
+                Explorar historias
+            </a>
+        </article>
+
+        <article class="biblioteca-card">
+            <h2>🎨 Ilustraciones</h2>
+
+            <p>
+                Conocé obras de artistas de Mikhan y descubrí nuevas
+                formas de representar mundos, personajes e ideas.
+            </p>
+
+            <div class="biblioteca-opciones">
+                <a href="ilustraciones/ilustraciones.html">Todas</a>
+                <a href="ilustraciones/ilustraciones.html">Estilos</a>
+                <a href="ilustraciones/ilustraciones.html">Géneros</a>
+                <a href="ilustraciones/ilustraciones.html">Recientes</a>
+                <a href="ilustraciones/ilustraciones.html">Populares</a>
+                <a href="/ilustraciones/ilustradores.html">Ilustradores</a>
+            </div>
+
+            <a class="biblioteca-principal" href="ilustraciones/ilustraciones.html">
+                Explorar ilustraciones
+            </a>
+        </article>
+
+    </section>
+
+    <section class="personas">
+
+        <h2>Conocé a quienes crean estos mundos</h2>
+
+        <div class="personas-grid">
+
+            <article class="personas-card">
+                <h3>✍️ Autores</h3>
+
+                <p>
+                    Encontrá escritores, conocé sus obras y descubrí
+                    nuevas historias para leer.
+                </p>
+
+                <a href="autores.html">Explorar autores</a>
+            </article>
+
+            <article class="personas-card">
+                <h3>🖌️ Ilustradores</h3>
+
+                <p>
+                    Descubrí artistas y explorá las ilustraciones
+                    que comparten en Mikhan.
+                </p>
+
+                <a href="ilustradores.html">Explorar ilustradores</a>
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

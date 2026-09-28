@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <meta name="description" content="La Taberna de Mikhan — un espacio para conversar, compartir ideas y conocer a otros miembros de la comunidad.">
+    <title>Taberna — Mikhan</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <img src="../img/mikhan logo.png" alt="Logo Mikhan">
+
+            <li><a href="../index/index.html">Entrada</a></li>
+            <li><a href="../bibliotecas/biblioteca.html">Bibliotecas</a></li>
+            <li><a href="../tablon/tablon.html">Mi tablón</a></li>
+            <li><a href="../taberna_index.html">Taberna</a></li>
+            <li><a href="../talleres/talleres.html">Talleres</a></li>
+            <li><a href="../cuenta/autenticacion/ingresar.html">Ingresar</a></li>
+        </ul>
+    </nav>
+
+    <!-- CABECERA -->
+    <header class="page-header">
+
+        <h1>La Taberna</h1>
+
+        <p>
+            Un lugar para conversar, compartir ideas y conocer
+            a otros habitantes de Mikhan.
+        </p>
+
+        <div class="header-actions">
+            <a href="crear.html" class="main-button">
+                Crear una discusión
+            </a>
+
+            <a href="mesas.html" class="secondary-button">
+                Explorar mesas
+            </a>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- BUSCADOR -->
+        <section class="search-section">
+
+            <form>
+
+                <input
+                    type="search"
+                    name="buscar"
+                    placeholder="Buscar en la Taberna..."
+                    aria-label="Buscar en la Taberna"
+                >
+
+                <button type="submit">
+                    Buscar
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- MESAS DESTACADAS -->
+        <section>
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Mesas</h2>
+
+                    <p>
+                        Encontrá conversaciones sobre los temas que
+                        más te interesan.
+                    </p>
+                </div>
+
+                <a href="mesas.html">
+                    Ver todas →
+                </a>
+
+            </div>
+
+
+            <div class="mesa-grid">
+
+
+                <!-- MESA -->
+                <article class="mesa-card">
+
+                    <div class="mesa-icon">
+                        ✒
+                    </div>
+
+                    <div>
+                        <h3>Escritura</h3>
+
+                        <p>
+                            Técnicas, consejos, bloqueos y experiencias
+                            escribiendo historias.
+                        </p>
+
+                        <span>
+                            324 discusiones
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <!-- MESA -->
+                <article class="mesa-card">
+
+                    <div class="mesa-icon">
+                        📖
+                    </div>
+
+                    <div>
+                        <h3>Lecturas</h3>
+
+                        <p>
+                            Recomendaciones, análisis y conversaciones
+                            sobre historias.
+                        </p>
+
+                        <span>
+                            218 discusiones
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <!-- MESA -->
+                <article class="mesa-card">
+
+                    <div class="mesa-icon">
+                        🎨
+                    </div>
+
+                    <div>
+                        <h3>Arte</h3>
+
+                        <p>
+                            Ilustración, dibujo, estilos, herramientas
+                            y procesos creativos.
+                        </p>
+
+                        <span>
+                            187 discusiones
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <!-- MESA -->
+                <article class="mesa-card">
+
+                    <div class="mesa-icon">
+                        💬
+                    </div>
+
+                    <div>
+                        <h3>Comunidad</h3>
+
+                        <p>
+                            Para charlar, conocerse y compartir cosas
+                            que no encajan en otras mesas.
+                        </p>
+
+                        <span>
+                            451 discusiones
+                        </span>
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- DISCUSIONES RECIENTES -->
+        <section>
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Discusiones recientes</h2>
+
+                    <p>
+                        Lo último que está pasando en la Taberna.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="discussion-list">
+
+
+                <!-- DISCUSIÓN -->
+                <article class="discussion">
+
+                    <div class="discussion-main">
+
+                        <span class="discussion-mesa">
+                            Escritura
+                        </span>
+
+                        <h3>
+                            <a href="discusión.html">
+                                ¿Cómo hacen para organizar historias largas?
+                            </a>
+                        </h3>
+
+                        <p>
+                            Estoy intentando planificar una historia bastante
+                            extensa y quería saber cómo se organizan ustedes.
+                        </p>
+
+                        <div class="discussion-meta">
+                            <span>por Noah</span>
+                            <span>Hace 15 minutos</span>
+                            <span>12 respuestas</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DISCUSIÓN -->
+                <article class="discussion">
+
+                    <div class="discussion-main">
+
+                        <span class="discussion-mesa">
+                            Arte
+                        </span>
+
+                        <h3>
+                            <a href="discusión.html">
+                                ¿Cuánto tiempo tardan en terminar una ilustración?
+                            </a>
+                        </h3>
+
+                        <p>
+                            Me interesa saber cuánto tiempo suelen dedicar
+                            a una ilustración desde el boceto hasta el render.
+                        </p>
+
+                        <div class="discussion-meta">
+                            <span>por Limo</span>
+                            <span>Hace 32 minutos</span>
+                            <span>8 respuestas</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DISCUSIÓN -->
+                <article class="discussion">
+
+                    <div class="discussion-main">
+
+                        <span class="discussion-mesa">
+                            Lecturas
+                        </span>
+
+                        <h3>
+                            <a href="discusión.html">
+                                Historias que recomendarían leer al menos una vez
+                            </a>
+                        </h3>
+
+                        <p>
+                            Busco historias que les hayan dejado alguna impresión
+                            especial, sin importar demasiado el género.
+                        </p>
+
+                        <div class="discussion-meta">
+                            <span>por Alma</span>
+                            <span>Hace 1 hora</span>
+                            <span>24 respuestas</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DISCUSIÓN -->
+                <article class="discussion">
+
+                    <div class="discussion-main">
+
+                        <span class="discussion-mesa">
+                            Comunidad
+                        </span>
+
+                        <h3>
+                            <a href="discusión.html">
+                                ¿Qué están haciendo últimamente?
+                            </a>
+                        </h3>
+
+                        <p>
+                            Un pequeño espacio para contar qué proyectos
+                            tienen entre manos estos días.
+                        </p>
+
+                        <div class="discussion-meta">
+                            <span>por Mikha</span>
+                            <span>Hace 2 horas</span>
+                            <span>31 respuestas</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DISCUSIÓN -->
+                <article class="discussion">
+
+                    <div class="discussion-main">
+
+                        <span class="discussion-mesa">
+                            Escritura
+                        </span>
+
+                        <h3>
+                            <a href="discusión.html">
+                                ¿Personajes planificados o descubiertos durante la escritura?
+                            </a>
+                        </h3>
+
+                        <p>
+                            Me interesa conocer cómo crean sus personajes
+                            y cuánto dejan que evolucionen durante el proceso.
+                        </p>
+
+                        <div class="discussion-meta">
+                            <span>por Silver</span>
+                            <span>Hace 3 horas</span>
+                            <span>17 respuestas</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="view-more">
+
+                <a href="mesas.html">
+                    Ver más discusiones →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- DISCUSIONES POPULARES -->
+        <section>
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Conversaciones populares</h2>
+
+                    <p>
+                        Algunas discusiones que están recibiendo
+                        mucha participación.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="popular-grid">
+
+
+                <article class="popular-card">
+
+                    <span>🔥 Popular</span>
+
+                    <h3>
+                        <a href="discusión.html">
+                            ¿Cuál fue el personaje más difícil que escribieron?
+                        </a>
+                    </h3>
+
+                    <p>
+                        87 respuestas · 1.2k visitas
+                    </p>
+
+                </article>
+
+
+                <article class="popular-card">
+
+                    <span>🔥 Popular</span>
+
+                    <h3>
+                        <a href="discusión.html">
+                            Mostrá tu escritorio de trabajo
+                        </a>
+                    </h3>
+
+                    <p>
+                        63 respuestas · 940 visitas
+                    </p>
+
+                </article>
+
+
+                <article class="popular-card">
+
+                    <span>🔥 Popular</span>
+
+                    <h3>
+                        <a href="discusión.html">
+                            ¿Qué hace que una historia te atrape?
+                        </a>
+                    </h3>
+
+                    <p>
+                        54 respuestas · 817 visitas
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p><strong>Mikhan</strong></p>
+
+        <p>
+            Cada escrito es un mundo.
+        </p>
+
+        <nav>
+            <ul>
+                <li><a href="../about.html">Sobre Mikhan</a></li>
+                <li><a href="../contact.html">Contacto</a></li>
+                <li><a href="../terminos.html">Términos y condiciones</a></li>
+                <li><a href="../privacidad.html">Privacidad</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+
+    <!-- ESTILOS ESPECÍFICOS -->
+
+    <style>
+
+        /* CABECERA */
+
+        .page-header {
+            max-width: var(--max-width);
+            margin: 50px auto 30px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.7rem;
+        }
+
+        .header-actions {
+            margin-top: 25px;
+        }
+
+        .main-button,
+        .secondary-button {
+            display: inline-block;
+
+            padding: 12px 20px;
+            margin: 5px;
+
+            border-radius: var(--radius);
+
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main-button {
+            background-color: var(--color-primary);
+            color: var(--color-soft-orange);
+        }
+
+        .main-button:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+        }
+
+        .secondary-button {
+            background-color: var(--color-surface);
+            color: var(--color-primary);
+
+            border: 1px solid var(--color-border);
+        }
+
+        .secondary-button:hover {
+            background-color: var(--color-surface-dark);
+        }
+
+
+        /* BUSCADOR */
+
+        .search-section {
+            text-align: center;
+        }
+
+        .search-section form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .search-section input {
+            width: 65%;
+            max-width: 650px;
+
+            padding: 13px 16px;
+
+            border: 1px solid var(--color-border-dark);
+            border-radius: var(--radius);
+
+            background-color: var(--color-surface);
+
+            color: var(--color-text);
+
+            font-family: var(--font-ui);
+        }
+
+        .search-section button {
+            padding: 13px 20px;
+
+            border: none;
+            border-radius: var(--radius);
+
+            background-color: var(--color-primary);
+            color: var(--color-soft-orange);
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .search-section button:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+        }
+
+
+        /* TÍTULOS DE SECCIÓN */
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 20px;
+        }
+
+        .section-heading h2 {
+            margin-bottom: 5px;
+        }
+
+        .section-heading p {
+            margin-top: 0;
+        }
+
+
+        /* MESAS */
+
+        .mesa-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+        }
+
+        .mesa-card {
+            display: flex;
+            gap: 18px;
+
+            padding: 22px;
+
+            background-color: var(--color-surface);
+
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+
+            box-shadow: var(--shadow-soft);
+        }
+
+        .mesa-icon {
+            width: 48px;
+            height: 48px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: var(--radius);
+
+            background-color: var(--color-primary);
+            color: var(--color-soft-orange);
+
+            font-size: 1.4rem;
+        }
+
+        .mesa-card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .mesa-card p {
+            margin-top: 5px;
+        }
+
+        .mesa-card span {
+            color: var(--color-muted);
+
+            font-family: var(--font-ui);
+            font-size: 0.8rem;
+        }
+
+
+        /* DISCUSIONES */
+
+        .discussion-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .discussion {
+            padding: 20px 22px;
+
+            background-color: var(--color-surface);
+
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+
+            box-shadow: var(--shadow-soft);
+        }
+
+        .discussion:hover {
+            border-color: var(--color-border-dark);
+        }
+
+        .discussion-mesa {
+            display: inline-block;
+
+            margin-bottom: 7px;
+            padding: 4px 9px;
+
+            background-color: var(--color-soft-orange);
+
+            border-radius: var(--radius);
+
+            color: var(--color-heading);
+
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .discussion h3 {
+            margin: 3px 0;
+        }
+
+        .discussion h3 a {
+            color: var(--color-heading);
+            text-decoration: none;
+        }
+
+        .discussion h3 a:hover {
+            color: var(--color-secondary);
+        }
+
+        .discussion p {
+            margin: 8px 0;
+        }
+
+        .discussion-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+
+            margin-top: 12px;
+
+            color: var(--color-muted);
+
+            font-family: var(--font-ui);
+            font-size: 0.8rem;
+        }
+
+
+        /* VER MÁS */
+
+        .view-more {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .view-more a {
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+        /* POPULARES */
+
+        .popular-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+        }
+
+        .popular-card {
+            padding: 22px;
+
+            background-color: var(--color-surface);
+
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+
+            box-shadow: var(--shadow-soft);
+        }
+
+        .popular-card > span {
+            color: var(--color-secondary);
+
+            font-family: var(--font-ui);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .popular-card h3 {
+            margin: 10px 0;
+        }
+
+        .popular-card h3 a {
+            color: var(--color-heading);
+            text-decoration: none;
+        }
+
+        .popular-card h3 a:hover {
+            color: var(--color-secondary);
+        }
+
+        .popular-card p {
+            margin-bottom: 0;
+
+            font-family: var(--font-ui);
+            font-size: 0.8rem;
+        }
+
+
+        /* MÓVIL */
+
+        @media (max-width: 600px) {
+
+            .search-section form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-section input {
+                width: 90%;
+            }
+
+            .search-section button {
+                width: 50%;
+            }
+
+            .section-heading {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</body>
+</html>

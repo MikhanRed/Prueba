@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <meta name="description" content="Contactate con el equipo de Mikhan.">
+    <title>Contacto — Mikhan</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <img src="../img/mikhan logo.png" alt="Logo Mikhan">
+
+            <li><a href="index.html">Entrada</a></li>
+            <li><a href="../bibliotecas/biblioteca.html">Bibliotecas</a></li>
+            <li><a href="../tablón/tablón.html">Mi tablón</a></li>
+            <li><a href="../taberna/taberna_index.html">Taberna</a></li>
+            <li><a href="../talleres/talleres.html">Talleres</a></li>
+            <li><a href="../cuenta/autenticacion/ingresar.html">Ingresar</a></li>
+        </ul>
+    </nav>
+
+
+    <main class="info-page">
+
+        <header class="info-header">
+
+            <h1>Contacto</h1>
+
+            <p>
+                ¿Tenés una pregunta, sugerencia o problema?
+                Estamos para escucharte.
+            </p>
+
+        </header>
+
+
+        <section>
+
+            <h2>Contactanos</h2>
+
+            <p>
+                Si necesitás comunicarte con Mikhan, podés utilizar
+                el formulario de contacto.
+            </p>
+
+            <form class="contact-form">
+
+                <label for="nombre">
+                    Nombre
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required
+                >
+
+
+                <label for="email">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="tu@email.com"
+                    required
+                >
+
+
+                <label for="asunto">
+                    Asunto
+                </label>
+
+                <input
+                    type="text"
+                    id="asunto"
+                    name="asunto"
+                    placeholder="¿Sobre qué querés contactarnos?"
+                    required
+                >
+
+
+                <label for="mensaje">
+                    Mensaje
+                </label>
+
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="8"
+                    placeholder="Escribí tu mensaje..."
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section>
+
+            <h2>Otros motivos de contacto</h2>
+
+            <p>
+                También podés utilizar este espacio para comunicar
+                problemas técnicos, reportar contenido o enviar
+                sugerencias para mejorar Mikhan.
+            </p>
+
+            <p>
+                Para reportar contenido específico de la plataforma,
+                procurá indicar claramente qué contenido estás
+                reportando y dónde se encuentra.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p><strong>Mikhan</strong></p>
+        <p>Cada escrito es un mundo.</p>
+
+        <nav>
+            <ul>
+                <li><a href="about.html">Sobre Mikhan</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="terminos.html">Términos y condiciones</a></li>
+                <li><a href="privacidad.html">Privacidad</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+
+    <style>
+
+        .info-page {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .info-header {
+            text-align: center;
+            margin: 40px 0 60px;
+        }
+
+        .info-header h1 {
+            font-size: 2.7rem;
+        }
+
+        .info-page section {
+            margin: 35px auto;
+            padding: 30px;
+
+            background-color: var(--color-surface);
+
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+
+            box-shadow: var(--shadow-soft);
+        }
+
+        .info-page section h2 {
+            margin-top: 0;
+        }
+
+        .info-page section p {
+            line-height: 1.7;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form label {
+            margin-top: 12px;
+
+            color: var(--color-heading);
+
+            font-family: var(--font-ui);
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            box-sizing: border-box;
+
+            width: 100%;
+
+            padding: 12px 14px;
+
+            border: 1px solid var(--color-border-dark);
+            border-radius: var(--radius);
+
+            background-color: var(--color-background);
+
+            color: var(--color-text);
+
+            font-family: var(--font-main);
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid var(--color-focus);
+        }
+
+        .contact-form button {
+            margin-top: 20px;
+            padding: 12px 20px;
+
+            border: none;
+            border-radius: var(--radius);
+
+            background-color: var(--color-primary);
+            color: var(--color-soft-orange);
+
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+        }
+
+    </style>
+
+</body>
+</html>

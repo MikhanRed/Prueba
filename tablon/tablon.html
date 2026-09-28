@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tu tablón de Mikhan — novedades de autores, historias, ilustradores y temas que seguís.">
+    <meta name="author" content="Mikhan">
+    <title>Mi tablón — Mikhan</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .tablon-hero {
+            max-width: var(--max-width);
+            margin: 45px auto 25px;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .tablon-hero h1 {
+            margin-bottom: 10px;
+            color: var(--color-heading);
+        }
+
+        .tablon-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .tablon-layout {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+            gap: 25px;
+            box-sizing: border-box;
+        }
+
+        .novedades h2,
+        .seguimiento h2 {
+            margin-top: 0;
+            color: var(--color-heading);
+        }
+
+        .novedad {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .novedad-tipo {
+            margin: 0 0 8px;
+            color: var(--color-secondary);
+            font-family: var(--font-ui);
+            font-size: .85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }
+
+        .novedad h3 {
+            margin: 0 0 8px;
+            color: var(--color-heading);
+        }
+
+        .novedad-meta {
+            margin-bottom: 15px;
+            color: var(--color-muted);
+            font-family: var(--font-ui);
+            font-size: .9rem;
+        }
+
+        .novedad a {
+            color: var(--color-secondary);
+            font-weight: bold;
+        }
+
+        .novedad a:hover {
+            color: var(--color-focus);
+        }
+
+        .seguimiento {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            padding: 25px;
+        }
+
+        .seguimiento ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .seguimiento li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            font-family: var(--font-ui);
+        }
+
+        .seguimiento li:last-child {
+            border-bottom: 0;
+        }
+
+        .seguimiento a {
+            color: var(--color-secondary);
+            font-weight: bold;
+        }
+
+        .seguimiento a:hover {
+            color: var(--color-focus);
+        }
+
+        .tablon-vacio {
+            margin-top: 25px;
+            padding: 25px;
+            background-color: var(--color-soft-orange);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            .tablon-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <img src="../img/mikhan logo.png" alt="Logo Mikhan">
+
+            <li><a href="../index/index.html">Entrada</a></li>
+            <li><a href="../bibliotecas/biblioteca.html">Bibliotecas</a></li>
+            <li><a href="tablon/tablon.html">Mi tablón</a></li>
+            <li><a href="../taberna/taberna_index.html">Taberna</a></li>
+            <li><a href="../talleres/talleres.html">Talleres</a></li>
+            <li><a href="../cuenta/autenticacion/ingresar.html">Ingresar</a></li>
+        </ul>
+    </nav>
+<header class="tablon-hero">
+    <h1>Mi tablón</h1>
+
+    <p>
+        Novedades de las personas, historias, ilustraciones y temas
+        que seguís o que pueden interesarte.
+    </p>
+</header>
+
+<main class="tablon-layout">
+
+    <section class="novedades">
+
+        <h2>Novedades</h2>
+
+        <article class="novedad">
+            <p class="novedad-tipo">Nueva publicación</p>
+
+            <h3>Una nueva ilustración de Noah</h3>
+
+            <p class="novedad-meta">
+                Noah publicó una nueva ilustración en la Biblioteca.
+            </p>
+
+            <p>
+                Descubrí la nueva obra y conocé más sobre el proceso
+                detrás de la ilustración.
+            </p>
+
+            <a href="../bibliotecas/ilustraciones.html">
+                Ver ilustración
+            </a>
+        </article>
+
+        <article class="novedad">
+            <p class="novedad-tipo">Nueva historia</p>
+
+            <h3>Soul Bearers — nuevo capítulo</h3>
+
+            <p class="novedad-meta">
+                Se publicó una nueva actualización de una historia que seguís.
+            </p>
+
+            <p>
+                Continuá leyendo la historia y descubrí qué ocurre
+                en el nuevo capítulo.
+            </p>
+
+            <a href="../bibliotecas/historias.html">
+                Ver historia
+            </a>
+        </article>
+
+        <article class="novedad">
+            <p class="novedad-tipo">Taberna</p>
+
+            <h3>Nueva discusión en Escritura</h3>
+
+            <p class="novedad-meta">
+                Una nueva conversación apareció en una mesa que seguís.
+            </p>
+
+            <p>
+                Participá de la conversación y compartí tu experiencia
+                con otros miembros de la comunidad.
+            </p>
+
+            <a href="../taberna/mesas.html">
+                Ir a la Taberna
+            </a>
+        </article>
+
+        <article class="novedad">
+            <p class="novedad-tipo">Talleres</p>
+
+            <h3>Nuevo concurso disponible</h3>
+
+            <p class="novedad-meta">
+                Hay un nuevo concurso en los Talleres de Mikhan.
+            </p>
+
+            <p>
+                Consultá las condiciones y descubrí cómo participar.
+            </p>
+
+            <a href="../talleres/concursos.html">
+                Ver concursos
+            </a>
+        </article>
+
+    </section>
+
+    <aside class="seguimiento">
+
+        <h2>Estás siguiendo</h2>
+
+        <ul>
+            <li>
+                <a href="../bibliotecas/historias.html">Historias</a>
+                <br>
+                <small>Novedades de historias que seguís.</small>
+            </li>
+
+            <li>
+                <a href="../bibliotecas/autores.html">Autores</a>
+                <br>
+                <small>Publicaciones de tus autores favoritos.</small>
+            </li>
+
+            <li>
+                <a href="../bibliotecas/ilustraciones.html">Ilustradores</a>
+                <br>
+                <small>Nuevas obras de artistas que seguís.</small>
+            </li>
+
+            <li>
+                <a href="../taberna/mesas.html">Mesas</a>
+                <br>
+                <small>Actividad de tus comunidades.</small>
+            </li>
+        </ul>
+
+        <div class="tablon-vacio">
+            <p>
+                Tu tablón se adapta a lo que seguís y a los temas
+                que te interesan.
+            </p>
+        </div>
+
+    </aside>
+
+</main>
+
+</body>
+</html>
