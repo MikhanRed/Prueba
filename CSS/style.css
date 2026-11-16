@@ -1,90 +1,182 @@
-/*Guía de estilo*/
-
+/* Corregí el comentario: debe ser /* SOMBRAS */
 :root {
-    /* IDENTIDAD — MIKHAN*/
-    --color-primary: #6b2f1a;          /* Marrón rojizo profundo */
-    --color-secondary: #c96b2c;        /* Mandarina quemada */
-    --color-accent: #e08a3e;           /* Naranja para resaltados */
+    /* Identidad */
+    --color-primary: #6b2f1a;
+    --color-secondary: #c96b2c;
+    --color-accent: #e08a3e;
 
-    /* FONDOS */
-    --color-background: #eee0c2;       /* Pergamino */
-    --color-surface: #f7efd9;          /* Papel antiguo */
-    --color-surface-dark: #ded0ae;     /* Papel envejecido */
+    /* Fondos */
+    --color-background: #eee0c2;
+    --color-surface: #f7efd9;
+    --color-surface-dark: #ded0ae;
 
-    /* TEXTO */
-    --color-text: #2b1b16;             /* Tinta oscura */
-    --color-muted: #725c4d;            /* Texto secundario */
-    --color-heading: #4b2117;          /* Títulos */
+    /* Texto */
+    --color-text: #2b1b16;
+    --color-muted: #725c4d;
+    --color-heading: #4b2117;
 
-    /* BORDES / DETALLES */
+    /* Bordes y detalles */
     --color-border: #cdbb98;
     --color-border-dark: #a9916d;
     --color-soft-orange: #f5dfc3;
     --color-soft-red: #f2ddd3;
 
-    /* INTERACCIÓN*/
+    /* Interacción */
     --color-focus: #d8782f;
     --color-hover: #a94f24;
 
-    /*SOMBRAS*/
+    /* Sombras */
     --shadow-soft: 0 12px 35px rgba(68, 35, 20, 0.12);
     --shadow-deep: 0 20px 50px rgba(55, 28, 15, 0.18);
 
-    /* TIPOGRAFÍA */
-    --font-main: "Georgia", "Times New Roman", serif;
+    /* Tipografía */
+    --font-main: Georgia, "Times New Roman", serif;
     --font-ui: Arial, Helvetica, sans-serif;
 
-    /* ESTRUCTURA*/
+    /* Estructura */
     --radius: 6px;
     --max-width: 1120px;
-
-    /* UTILIDADES */
-    --color-var: #ffffff;
 }
 
-/* Selector de etiqueta nav*/
-nav {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    text-align: center;
+* {
+    box-sizing: border-box;
+}
+/* Etiqueta, .clase, #id*/
+body {
+    margin: 0;
+    color: var(--color-text);
+    background: var(--color-background);
+    font-family: var(--font-main);
 }
 
-nav ul {
+.site-nav {
+    position: relative;
+    min-height: 72px;
+    padding: 0 24px;
+    background: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: max(24px, calc((100% - var(--max-width)) / 2));
+    display: flex;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+#nav-links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     max-width: var(--max-width);
+    min-height: 70px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 10px 80px;
     list-style: none;
 }
 
-nav a {
+#nav-links a {
     color: var(--color-background);
-    text-decoration: none;
+    font-family: var(--font-ui);
     font-weight: bold;
+    text-decoration: none;
 }
 
-nav a:hover {
-    color: #e08a3e;;
+#nav-links a:hover {
+    color: var(--color-accent);
 }
 
-nav a.active {
+#nav-links a.active {
     color: #ffbb00;
 }
 
-nav img {
-    width: 50px;
-    height: 50px;
+.menu-toggle {
+    display: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 4px;
+}
+
+/* Menú para pantalla pequeña */
+@media (max-width: 700px) {
+    .site-nav {
+        min-height: 64px;
+        padding: 0 12px;
+        background: var(--color-surface);
+    }
+
+    .logo {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .logo img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        display: block;
+        transform: translateY(-50%);
+        padding: 8px;
+        color: var(--color-primary);
+        background: transparent;
+        border: 0;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    #nav-links {
+        position: absolute;
+        z-index: 10;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        min-height: 0;
+        max-width: none;
+        margin: 0;
+        padding: 8px 16px;
+        background: var(--color-primary);
+        border-bottom: 2px solid var(--color-accent);
+    }
+
+    #nav-links.is-open {
+        display: flex;
+    }
+    /*.is-open hace que la lista se muestre de nuevo*/
+
+    #nav-links a {
+        display: block;
+        padding: 12px 8px;
+    }
+}
 body {
     margin: 0;
     background-color: var(--color-background);
     color: var(--color-text);
     font-family: var(--font-main);
 }
+
 h1,
 h2,
 h3 {
@@ -128,6 +220,14 @@ header a:hover {
     color: var(--color-primary);
 }
 
+#posteo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid yellow;
+}
 
 /*Selector de clase Post*/
 .Post {
@@ -141,7 +241,53 @@ header a:hover {
 
 #destacados {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    max-width: none;
+    margin: 0 auto;
+    padding: 32px 20px;
+    text-align: center;
+}
+#destacados h2 {
+    margin: 0 0 48px;
+}
+#destacados > p {
+    margin: 0 0 36px;
+}
+#destacados article {
+    box-sizing: border-box;
+    width: min(100%, 398px);
+    text-align: left;
+}
+
+
+/*Etiquetas de Bloque: Ocupa un espacio de ancho y alto*/
+/*Div, Section, Article, P, Footer, img, */
+
+/*Etiquetas de linea: Solo ocupa el ancho necesario*/
+/*H, A, Span, */
+
+#miCarrusel {
+max-width: 1000px;
+margin: 0 auto;
+overflow: hidden;
+border-radius: 16px;
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+#miCarrusel .carousel-item img {
+height: 450px;
+object-fit: cover;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+#miCarrusel .carousel-item img {
+    height: 250px;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
 }

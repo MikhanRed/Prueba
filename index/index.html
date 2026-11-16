@@ -1,47 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mikhan</title>
     <link rel="stylesheet" href="../css/style.css">
-
-        <meta charset="UTF-8">
-        <meta name="keywords" content="Mikhan, novelas, escritores, historias, literatura, novela ligera, fantasía, ciencia ficción, romance, misterio, suspenso, aventura, drama, comedia, terror">
-        <meta name="description" content="Mikhan — Cada escrito es un mundo. Descubrí historias, conocé autores y publicá tus propias obras.">
-        <meta name="author" content="Mikhan">
-        <title>Mikhan — Cada arte es un mundo</title>
-    </head>
+    <script src="script.js" defer></script>
+</head>
 <body>
+    <nav class="site-nav" aria-label="Navegación principal">
+        <button class="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false" 
+            aria-controls="nav-links"> 
+            ☰
+            <!-- Aria expanded false, comienza cerrada. Aria Label, función del botón. Aria Control, con qué lista está vinculada-->
+        </button>
 
-<nav>
-    <ul>
-        <img src="../img/mikhan logo.png" alt="Logo Mikhan" width="250" height="250">
-        <li><a href="index.html">Entrada</a></li>
-    <li><a href="../bibliotecas/biblioteca.html">Bibliotecas</a></li>
-        <li><a href="../tablon/tablon.html">Mi tablón</a></li>
-        <li><a href="../taberna/taberna_index.html">Taberna</a></li>
-        <li><a href="../talleres/talleres.html">Talleres</a></li>
-        <li><a href="../cuenta/autenticacion/registro.html">Registro</a></li>
-    </ul>
-</nav>
+        <a class="logo" href="index.html" aria-label="Mikhan, inicio">
+            <img src="../img/mikhan logo.png" alt="Logo Mikhan">
+        </a>
 
-<div class="Post">
-        <h2>Un mundo por descubrir</h2>
-        <p>Explorá nuevas historias y encontrá tu próxima lectura favorita.</p>
+        <ul id="nav-links">
+            <li><a href="index.html" class="active" aria-current="page">Entrada</a></li>
+            <li><a href="../bibliotecas/biblioteca.html">Bibliotecas</a></li>
+            <li><a href="../tablon/tablon.html">Mi tablón</a></li>
+            <li><a href="../taberna/taberna_index.html">Taberna</a></li>
+            <li><a href="../talleres/talleres.html">Talleres</a></li>
+            <li><a href="../cuenta/autenticacion/registro.html">Registro</a></li>
+        </ul>
+    </nav>
+<div id="baner" class="baners">
+        <h2>Un mundo por descubrir</h2> 
+        <p>Cada artista es un mundo</p>/*Imagen1*/
     </div>
-    <div class="Post">
+    <div id="baner" class="baners">
         <h2>Historias que inspiran</h2>
-        <p>Conocé relatos únicos creados por autores apasionados.</p>
+        <p>Conocé relatos únicos creados por autores apasionados.</p> /*Imagen3*/
     </div>
-    <div class="Post">
+    <div id="baner" class="baners">
         <h2>Compartí tu mundo</h2>
-        <p>Publicá tus propias obras y conectá con otros lectores.</p>
+        <p>Publicá tus propias obras y conectá con el mundo</p>/*Imagen2*/
+    </div>
+<div id="baner" class="baners">
+        <h2></h2>
+        <p>Desde escritores novatos hasta autores consagrados, Mikhan es para todos.</p>/*Imagen4*/
     </div>
 
 <header>
     <h1 class="titulo">Mikhan</h1>
-    <p><strong>Cada escrito es un mundo.</strong></p>
+    <p><strong>Cada artista es un mundo.</strong></p>
     <p>
-        Descubrí nuevas historias, conocé a sus autores
-        y encontrá mundos en los que perderte.
+        Descubrí historias, ilustraciones, y embarcate en un viaje hacía nuevos mundos!
+    </p>
+    <p>
+        De artistas, para el mundo!
     </p>
     <a href="explorar.html">Explorar historias</a>
     <a href="publicar.html">Publicar mi historia</a>
@@ -54,18 +68,48 @@
             Algunos de los mundos que podés descubrir en Mikhan.
         </p>
         <article>
-            <h3>Soul Bearers</h3>
+            <h3>Soul Bearers</h3> /*Portada soul bearers*/
             <p>
                 Una historia de fantasía, almas y guerras divinas.
             </p>
             <p>
                 <strong>Autor:</strong> Noah
             </p>
-            <a href="soul-bearers.html">Conocer la historia</a>
+            <a href="../bibliotecas/historias/indexsb.html">Conocer la historia</a>
+        </article>
+        <article>
+            <h3> Ecos entrelazados </h3> /*Portada ecos entrelazados*/
+            <p>
+                Un mundo oculto, un pasado redescubierto.
+            </p>
+            <p>
+                <strong>Autor:</strong> Noah
+            </p>
+            <a href="../bibliotecas/historias/ecos_entrelazados.html">Conocer la historia</a>
+        </article>
+        <article>
+            <h3> Ni en mil realidades</h3> /*Portada nemr*/
+            <p>
+                Un rechazo. Es todo lo que necesitó para probarle a su crush que podría enamorarla si lograba enamorarla en otros mundos. Y todo lo que necesitó para desquebrajar el limite del multiverso en su ciudad.
+            </p>
+            <p>
+                <strong>Autor:</strong> Noah
+            </p>
+            <a href="../bibliotecas/historias/nemr.html">Conocer la historia</a>
+        </article>
+        <article>
+            <h3> Agartha </h3> /*Portada agartha*/
+            <p>
+                El mundo está muriendo, y la única esperanza es que en el fondo del pozo producto del deshielo, haya una salvación además de un infierno de flora y fauna.
+            </p>
+            <p>
+                <strong>Autor:</strong> Noah
+            </p>
+            <a href="../bibliotecas/historias/agartha.html">Conocer la historia</a>
         </article>
     </section>
 
-    <section id="Explorar">
+    <section id="Explorar"> /*Imagen*/
         <h2>Explorá nuevos mundos</h2>
         <p>
             Encontrá historias según lo que tengas ganas de leer.
@@ -82,7 +126,7 @@
     </section>
 
 
-    <section id="Autores">
+    <section id="Autores"> /*Imagen*/
         <h2>Conocé a los autores</h2>
         <p>
             Detrás de cada mundo existe alguien que decidió escribirlo.
@@ -90,7 +134,7 @@
         <a href="autores.html">Explorar autores</a>
     </section>
 
-    <section id="Publicar">
+    <section id="Publicar"> /*Imagen*/
         <h2>Tu mundo también merece ser contado</h2>
         <p>
             Escribí, publicá y compartí tus historias con otros lectores.
@@ -99,7 +143,7 @@
         <a href="publicar.html">Comenzar a publicar</a>
     </section>
 
-    <section id="Mikhan">
+    <section id="Mikhan"> /*Imagen*/
         <h2>¿Qué es Mikhan?</h2>
         <p>
             Mikhan es un espacio para escritores y lectores.
